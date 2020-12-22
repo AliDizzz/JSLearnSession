@@ -64,3 +64,45 @@ const secondsPerMinute = 60 ;
 // string (chaîne de caractères) ;
 
 // boolean (valeur logique).
+
+// == CREER UN OBJET ==
+
+let episode = {
+    title: 'Dark Beginnings',
+    duration: 45,
+    hasBeenWatched: false
+    };
+
+    let episodeTitle = episode.title;
+    let episodeDuration = episode.duration;
+    let episodeHasBeenWatched = episode.hasBeenWatched;
+
+    // === CLASS CONSTRUCTOR ===
+
+
+    // Il y a un ensemble d'instructions à suivre à l'intérieur du  constructor  pour créer une instance de la classe  Book.
+    // Pour attribuer le titre, l'auteur et le nombre de pages reçus à cette instance, utilisez le mot clé  this  et la notation dot.
+    class Book {
+        constructor(title, author, pages) {
+            this.title = title;
+            this.author = author;
+            this.pages = pages;
+        }
+    }
+    //Ici, le mot clé  this  fait référence à la nouvelle instance. 
+    //Donc, il utilise la notation dot pour attribuer les valeurs reçues aux clés correspondantes.
+
+    // =====================================EXEMPLE
+class Episode {
+    constructor(title,duration,hasBeenWatched) {
+
+    this.title = title ;
+    this.duration = duration ;
+    this.hasBeenWatched = hasBeenWatched ;
+    }
+}
+    let firstEpisode = new Episode('caca', 45, true);
+    let secondEpisode = new Episode('pipi', 45, true);
+    let thirdEpisode = new Episode('popo', 45, false);
+
+  // =====================================EXEMPLE
