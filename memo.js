@@ -92,7 +92,7 @@ let episode = {
     //Ici, le mot clé  this  fait référence à la nouvelle instance. 
     //Donc, il utilise la notation dot pour attribuer les valeurs reçues aux clés correspondantes.
 
-    // =====================================EXEMPLE
+    // ===================================== EXEMPLE
 class Episode {
     constructor(title,duration,hasBeenWatched) {
 
@@ -105,4 +105,50 @@ class Episode {
     let secondEpisode = new Episode('pipi', 45, true);
     let thirdEpisode = new Episode('popo', 45, false);
 
-  // =====================================EXEMPLE
+    let episodes = [firstEpisode, secondEpisode, thirdEpisode]; // Array
+
+  // ===================================== EXEMPLE
+
+    //Accédez aux données d'un objet
+    let myBook = {
+    title: "L'Histoire de Tao",
+    author: "Will Alexander",
+    numberOfPages: 250,
+    isAvailable: true
+};
+
+let bookTitle = myBook.title;  // "L'Histoire de Tao"
+let bookPages = myBook.numberOfPages  // 250
+
+
+//MANIPULER DES CLASS
+
+class Book {
+    constructor(title, author, pages) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+    }
+}
+let myBook = new Book("L'Histoire de Tao", "Will Alexander", 250); 
+// Cette ligne crée l'objet suivant : { title: "L'Histoire de Tao", author: "Will Alexander", pages: 250 }
+
+//============================================ARRAY===========================================================
+//=== Propriété length d'un ARRAY ===
+let guests = ["Will Alexander", "Sarah Kate", "Audrey Simon"];
+
+let howManyGuests = guests.length; // 3 ellements
+
+//=== L'ajout et la suppression d'éléments ===
+
+//Pour ajouter un élément à la fin d'un tableau, utilisez sa méthode push :
+guests.push("Tao Perkington"); // ajoute "Tao Perkington" à la fin de notre tableau guests
+
+//Pour ajouter votre élément au début du tableau plutôt qu'à la fin, utilisez la méthode  unshift  :
+guests.unshift("Tao Perkington"); // "Tao Perkington" est ajouté au début du tableau guests
+
+//Pour supprimer le dernier élément d'un tableau, appelez sa méthode  pop, sans passer aucun argument :
+guests.pop(); // supprimer le dernier élément du tableau
+
+
+
