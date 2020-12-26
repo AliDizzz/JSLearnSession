@@ -312,3 +312,69 @@ switch (firstUser.accountLevel) {
     default:
         console.log('Unknown account type!');
 }
+
+// ------------  BOUCLE FOR/WHILE ---------------------
+
+const numberOfPassengers = 10;
+
+for (let i = 0; i < numberOfPassengers; i++) {
+    console.log("Passager embarqué !");
+}
+
+console.log("Tous les passagers sont embarqués !");
+
+// -----------  TABLEAUX FOR...OF/FOR...IN  ----------------
+
+//La boucle  for  …  in  est très comparable à l'exemple de boucle  for  normale, mais elle est plus facile à lire, et effectue tout le travail d'itération pour vous :
+const passengers = [
+    "Will Alexander",
+    "Sarah Kate'",
+    "Audrey Simon",
+    "Tao Perkington"
+]
+
+for (let i in passengers) {
+    console.log("Embarquement du passager " + passengers[i]);
+}
+//Comme dans l'exemple précédent,  i  démarre automatiquement à zéro, et s'incrémente à chaque boucle. Vous imprimez donc  passengers[0], puispassengers[1], puis  passengers[2], etc., jusqu'à terminer l'itération sur tous les passagers. Vous pouvez bien sûr imprimer chaque élément sur la console, car chacun est une chaîne contenant le nom du passager.
+
+//En reprenant l'exemple précédent et en utilisant à la place une boucle  for  …  of, vous obtenez :
+const passengers = [
+    "Will Alexander",
+    "Sarah Kate",
+    "Audrey Simon",
+    "Tao Perkington"
+]
+
+for (let passenger of passengers) {
+    console.log("Embarquement du passager " + passenger);
+}
+//Ceci atteint exactement le même résultat, mais de façon plus lisible, car vous n'avez pas à vous inquiéter des indices et des tableaux : vous recevez simplement chaque élément dans l'ordre. C'est encore plus utile si le tableau est un peu plus complexe et contient par exemple des objets :
+const passengers = [
+    {
+        name: "Will Alexander",
+        ticketNumber: 209542
+    },
+    {
+        name: "Sarah Kate",
+        ticketNumber: 169336
+    },
+    {
+        name: "Audrey Simon",
+        ticketNumber: 779042
+    },
+    {
+        name: "Tao Perkington",
+        ticketNumber: 703911
+    }
+]
+
+for (let passenger of passengers) {
+    console.log('Embarquement du passager ' + passenger.name + ' avec le ticket numéro ' + passenger.ticketNumber);
+}
+
+// EXO:Itérez le tableau  episodes  et assignez la valeur false à la propriété  hasBeenWatched  de chaque épisode, en utilisant une boucle for, for…in ou for…of.
+for (let episode of episodes) {
+    episode.hasBeenWatched = false ;
+}
+
